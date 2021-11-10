@@ -34,7 +34,6 @@ class Module:
         for child_ in self._modules:
             self._modules[child_].eval()
 
-
     def named_parameters(self):
         """
         Collect all the parameters of this module and its descendents.
@@ -65,10 +64,7 @@ class Module:
             child_params = self._modules[child_].parameters()
             for item in child_params:
                 res.append(item)
-
         return res
-
-       
 
     def add_parameter(self, k, v):
         """

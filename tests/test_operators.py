@@ -99,13 +99,13 @@ def test_eq(a):
 @given(small_floats)
 def test_sigmoid(a):
     """
-    Args:
-        a (float): .
     Check properties of the sigmoid function, specifically
     * It is always between 0.0 and 1.0.
     * one minus sigmoid is the same as negative sigmoid
     * It crosses 0 at 0.5
     * it is  strictly increasing.
+    Args:
+        a (float): .
     """
     # TODO: Implement for Task 0.2.
     assert sigmoid(a) >= 0.0
@@ -113,7 +113,6 @@ def test_sigmoid(a):
     assert_close(1 - sigmoid(a), sigmoid(-a))
     assert_close(sigmoid(0), 0.5)
     assert sigmoid(a + 1.0) >= sigmoid(a)
-
 
 
 @pytest.mark.task0_2
@@ -165,6 +164,8 @@ def test_distribute(a, b, c):
 def test_other(a):
     """
     Write a test that ensures some other property holds for your functions.
+    Args:
+        a (float): .
     """
     # TODO: Implement for Task 0.2.
     # assert_close(log(exp(a)), a)
@@ -206,7 +207,6 @@ def test_sum_distribute(ls1, ls2):
     l2 = [x + y for x, y in zip(ls1, ls2)]
     for i in range(len(l1)):
         assert_close(l1[i], l2[i])
-    # raise NotImplementedError('Need to implement for Task 0.3')
 
 
 @pytest.mark.task0_3
