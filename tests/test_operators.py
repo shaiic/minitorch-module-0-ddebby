@@ -108,8 +108,6 @@ def test_sigmoid(a):
     Args:
         a (float): small floats.
 
-    Returns:
-        None.
     """
     # TODO: Implement for Task 0.2.
     assert sigmoid(a) >= 0.0
@@ -143,8 +141,6 @@ def test_symmetric(a, b):
         a (float): small floats.
         b (float): small floats.
 
-    Returns:
-        None.
     """
     # TODO: Implement for Task 0.2.
     assert_close(mul(a, b), mul(b, a))
@@ -164,8 +160,6 @@ def test_distribute(a, b, c):
         b (float): small floats.
         c (float): small floats.
 
-    Returns:
-        None.
     """
     # TODO: Implement for Task 0.2.
     assert_close(mul(c, add(a, b)), add(mul(c, a), mul(c, b)))
@@ -180,8 +174,6 @@ def test_other(a):
     Args:
         a (float): small floats.
 
-    Returns:
-        None.
     """
     # TODO: Implement for Task 0.2.
     # assert_close(log(exp(a)), a)
@@ -219,8 +211,6 @@ def test_sum_distribute(ls1, ls2):
         ls1 (list): list with numbers.
         ls2 (list): list with numbers.
 
-    Returns:
-        None.
     """
     # TODO: Implement for Task 0.3.
     l1 = addLists(ls1, ls2)
