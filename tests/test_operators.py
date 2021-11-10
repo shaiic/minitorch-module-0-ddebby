@@ -104,8 +104,12 @@ def test_sigmoid(a):
     * one minus sigmoid is the same as negative sigmoid
     * It crosses 0 at 0.5
     * it is  strictly increasing.
+
     Args:
-        a (float): .
+        a (float): small floats.
+
+    Returns:
+        None.
     """
     # TODO: Implement for Task 0.2.
     assert sigmoid(a) >= 0.0
@@ -134,9 +138,13 @@ def test_symmetric(a, b):
     """
     Write a test that ensures that :func:`minitorch.operators.mul` is symmetric, i.e.
     gives the same value regardless of the order of its input.
+
     Args:
-        a (float): .
-        b (float): .
+        a (float): small floats.
+        b (float): small floats.
+
+    Returns:
+        None.
     """
     # TODO: Implement for Task 0.2.
     assert_close(mul(a, b), mul(b, a))
@@ -150,10 +158,14 @@ def test_distribute(a, b, c):
     r"""
     Write a test that ensures that your operators distribute, i.e.
     :math:`z \times (x + y) = z \times x + z \times y`
+
     Args:
-        a (float): .
-        b (float): .
-        c (float): .
+        a (float): small floats.
+        b (float): small floats.
+        c (float): small floats.
+
+    Returns:
+        None.
     """
     # TODO: Implement for Task 0.2.
     assert_close(mul(c, add(a, b)), add(mul(c, a), mul(c, b)))
@@ -164,8 +176,12 @@ def test_distribute(a, b, c):
 def test_other(a):
     """
     Write a test that ensures some other property holds for your functions.
+
     Args:
-        a (float): .
+        a (float): small floats.
+
+    Returns:
+        None.
     """
     # TODO: Implement for Task 0.2.
     # assert_close(log(exp(a)), a)
@@ -198,9 +214,13 @@ def test_sum_distribute(ls1, ls2):
     """
     Write a test that ensures that the sum of `ls1` plus the sum of `ls2`
     is the same as the sum of each element of `ls1` plus each element of `ls2`.
+
     Args:
-        ls1 (list):.
-        ls2 (list): .
+        ls1 (list): list with numbers.
+        ls2 (list): list with numbers.
+
+    Returns:
+        None.
     """
     # TODO: Implement for Task 0.3.
     l1 = addLists(ls1, ls2)
