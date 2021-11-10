@@ -98,7 +98,10 @@ def test_eq(a):
 @pytest.mark.task0_2
 @given(small_floats)
 def test_sigmoid(a):
-    """Check properties of the sigmoid function, specifically
+    """
+    Args:
+        a (float): .
+    Check properties of the sigmoid function, specifically
     * It is always between 0.0 and 1.0.
     * one minus sigmoid is the same as negative sigmoid
     * It crosses 0 at 0.5
@@ -111,7 +114,6 @@ def test_sigmoid(a):
     assert_close(sigmoid(0), 0.5)
     assert sigmoid(a + 1.0) >= sigmoid(a)
 
-    #raise NotImplementedError('Need to implement for Task 0.2')
 
 
 @pytest.mark.task0_2
@@ -125,7 +127,6 @@ def test_transitive(a, b, c):
         assert lt(a, b)
     elif lt(b, c) and lt(c, a):
         assert lt(b, a)
-    #raise NotImplementedError('Need to implement for Task 0.2')
 
 
 @pytest.mark.task0_2
@@ -134,12 +135,14 @@ def test_symmetric(a, b):
     """
     Write a test that ensures that :func:`minitorch.operators.mul` is symmetric, i.e.
     gives the same value regardless of the order of its input.
+    Args:
+        a (float): .
+        b (float): .
     """
     # TODO: Implement for Task 0.2.
     assert_close(mul(a, b), mul(b, a))
     assert_close(mul(-a, b), mul(-b, a))
     assert_close(mul(a, 0.0), mul(0.0, a))
-    #raise NotImplementedError('Need to implement for Task 0.2')
 
 
 @pytest.mark.task0_2
@@ -148,10 +151,13 @@ def test_distribute(a, b, c):
     r"""
     Write a test that ensures that your operators distribute, i.e.
     :math:`z \times (x + y) = z \times x + z \times y`
+    Args:
+        a (float): .
+        b (float): .
+        c (float): .
     """
     # TODO: Implement for Task 0.2.
     assert_close(mul(c, add(a, b)), add(mul(c, a), mul(c, b)))
-    #raise NotImplementedError('Need to implement for Task 0.2')
 
 
 @pytest.mark.task0_2
@@ -160,13 +166,11 @@ def test_other(a):
     """
     Write a test that ensures some other property holds for your functions.
     """
-    #None
     # TODO: Implement for Task 0.2.
     # assert_close(log(exp(a)), a)
     if a != 0.0:
         assert_close(inv(a) * a, 1.0)
-        assert_close(inv(inv(a)), a)  #还原律
-    #raise NotImplementedError('Need to implement for Task 0.2')
+        assert_close(inv(inv(a)), a)  # 还原律
 
 
 # ## Task 0.3  - Higher-order functions
@@ -193,6 +197,9 @@ def test_sum_distribute(ls1, ls2):
     """
     Write a test that ensures that the sum of `ls1` plus the sum of `ls2`
     is the same as the sum of each element of `ls1` plus each element of `ls2`.
+    Args:
+        ls1 (list):.
+        ls2 (list): .
     """
     # TODO: Implement for Task 0.3.
     l1 = addLists(ls1, ls2)

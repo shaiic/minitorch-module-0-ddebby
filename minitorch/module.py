@@ -33,7 +33,7 @@ class Module:
         self.training = False
         for child_ in self._modules:
             self._modules[child_].eval()
-        #raise NotImplementedError('Need to implement for Task 0.4')
+
 
     def named_parameters(self):
         """
@@ -44,8 +44,8 @@ class Module:
         """
         # TODO: Implement for Task 0.4.
         res = []
-        for k,v in self._parameters.items():
-            res.append((k,v))
+        for k, v in self._parameters.items():
+            res.append((k, v))
 
         for child_ in self._modules:
             child_params = self._modules[child_].named_parameters()
@@ -68,7 +68,7 @@ class Module:
 
         return res
 
-        #raise NotImplementedError('Need to implement for Task 0.4')
+       
 
     def add_parameter(self, k, v):
         """
