@@ -51,7 +51,7 @@ def max(x, y):
 
 
 def is_close(x, y):
-    ":math:`f(x) = |x - y| < 1e-2` "
+    ":math:`f(x) = |x - y| < 1e-2`"
     # TODO: Implement for Task 0.1.
     return abs(x - y) < 1e-2
 
@@ -122,13 +122,14 @@ def inv(x):
 def inv_back(x, d):
     r"If :math:`f(x) = 1/x` compute d :math:`d \times f'(x)`"
     # TODO: Implement for Task 0.1.
-    return - d / x**(-2)
+    return -d / x ** 2
 
 
 def relu_back(x, d):
     r"If :math:`f = relu` compute d :math:`d \times f'(x)`"
     # TODO: Implement for Task 0.1.
     return d if x > 0 else 0.0
+
 
 # ## Task 0.3
 
@@ -154,6 +155,7 @@ def map(fn):
     # TODO: Implement for Task 0.3.
     def _map(ls):
         return [fn(x) for x in ls]
+
     return _map
 
 
